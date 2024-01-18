@@ -124,6 +124,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  scripts: [{src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'draky.dev'}],
 };
 
 module.exports = config;
