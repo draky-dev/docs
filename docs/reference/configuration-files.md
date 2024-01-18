@@ -31,7 +31,7 @@ to the file becomes its ID.
   variable will be available, then you can reference this configuration file here by its `id`.
 - `version` –> `str, optional`: Configuration files can also have a versioning information.
 
-[Addon](/docs/reference/addons/introduction) is a special type of configuration file.
+[Addon](/docs/reference/addons/about) is a special type of configuration file.
 
 It does everything that normal configuration files do, but additionally it indicates the addon
 location.
