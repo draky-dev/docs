@@ -1,0 +1,8 @@
+{
+  "label": "Built-in commands",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about the built-in commands."
+  }
+}
