@@ -5,10 +5,11 @@ sidebar_position: 1
 # docker-compose.yml
 
 ## Introduction
-draky allows you to use your own `docker-compose.yml` file as the base for your environment, but it also allows for
-generating one based on the recipe. The difference between the directly providing the `docker-compose.yml` file, and
-generating one is that in the case of the recipe [addons](/docs/reference/addons/about) can hook into the
-generation process and automatically tweak the resulting `docker-compose.yml` file.
+`docker-compose.yml` is a final definition of your environment. draky allows you to use your own
+`docker-compose.yml` file, but it also allows for generating one based on the recipe. The
+difference between the directly providing the `docker-compose.yml` file, and generating one is
+that in the case of the recipe [addons](/docs/reference/addons/about) can hook into the generation process and automatically
+tweak the resulting `docker-compose.yml` file.
 
 draky is looking for the docker-compose file in the following location: `.draky/env/dev/docker-compose.yml`.
 
@@ -77,7 +78,6 @@ services:
       PHP_IDE_CONFIG: "${DRAKY_PHP_IDE_CONFIG}"
     volumes:
       - "${DRAKY_PROJECT_ROOT}:/var/www/html:cached,rw"
-      - "./resources:/draky-entrypoint.resources:cached,ro"
 ```
 
 In the above example the `DRAKY_OVERRIDE_*` variables and the `/draky-entrypoint.resources` volume are being used by
