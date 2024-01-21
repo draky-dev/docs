@@ -11,16 +11,16 @@ You can run `draky -h` and add `-h` to any command, to get help regarding the tr
 
 ## stdin
 
-All custom commands can handle `stdin` input. It means that you can have a script executed inside your
-`database` container like so:
+All custom commands can handle standard input. It means that you can have a script registered
+as a command executed inside your `database` container like so:
 
-**mysql.database.dk.sh**:
+**.draky/mysql.database.dk.sh**:
 ```bash
 #!/usr/bin/env bash
 mysql -uroot "$@" < /dev/stdin
 ```
 
-That would be invoked as a command in a following way:
+And that command could be invoked in a following way:
 
 ```bash
 $ draky mysql mydatabase < ./dbdump.sql
