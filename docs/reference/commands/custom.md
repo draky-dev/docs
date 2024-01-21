@@ -34,3 +34,23 @@ with `.yml` appended to it.
 
 The following metadata values are supported:
 - `help` [string]: Information displayed in the terminal next to the command in the draky's `-h` output.
+
+## stdin
+
+All custom commands can handle standard input. It means that you can have a script registered
+as a command executed inside your `database` container like so:
+
+**.draky/mysql.database.dk.sh**:
+```bash
+#!/usr/bin/env bash
+mysql -uroot "$@" < /dev/stdin
+```
+
+And that command could be invoked in a following way:
+
+```bash
+$ draky mysql mydatabase < ./dbdump.sql
+```
+
+That way you can pass/redirect input into your commands to feed it into processes running inside
+the containers.

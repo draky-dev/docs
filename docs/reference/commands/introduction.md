@@ -8,23 +8,3 @@ environment, but also allows you to create your own custom commands that can be 
 containers.
 
 You can run `draky -h` and add `-h` to any command, to get help regarding the tree of available commands.
-
-## stdin
-
-All custom commands can handle standard input. It means that you can have a script registered
-as a command executed inside your `database` container like so:
-
-**.draky/mysql.database.dk.sh**:
-```bash
-#!/usr/bin/env bash
-mysql -uroot "$@" < /dev/stdin
-```
-
-And that command could be invoked in a following way:
-
-```bash
-$ draky mysql mydatabase < ./dbdump.sql
-```
-
-That way you can pass/redirect input into your commands to feed it into processes running inside
-the containers.
