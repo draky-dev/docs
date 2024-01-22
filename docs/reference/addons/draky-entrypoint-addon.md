@@ -75,3 +75,11 @@ string.
 Note also that because you can use variables from your [configuration files](/docs/reference/configuration-files) in the service definitions,
 you can pass them into the container and use in your files in the `override` directory. That way you to some degree
 you can configure files inside your container with your configuration files on the host.
+
+## Environmental variables
+
+You can pass some optional environmental variables to the container that is using `draky-entrypoint`, to alter its behavior.
+
+`DRAKY_ENTRYPOINT_DO_CREATE_HOST_USER` - if this variable has a value, the `draky-entrypoint` will create a user with the name `host`,
+with the same id as value of this variable. Why would you want to use it? For example: if you want to run something inside the
+container as a host. That way you will have access to the files created by this process. A common use case would be `php-fpm`.
