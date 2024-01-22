@@ -35,6 +35,18 @@ To install templates, simply download or prepare them yourself, and put them in 
 The following examples can be customized, and put directly in your project, or installed as templates,
 to be easily reused later.
 
+If you opt to not install these configurations as templates, and just want to use them directly, you
+can just copy their files to your project's `.draky/` directory, and add the `core.dk.yml` file with the
+following content:
+
+```yaml
+variables:
+    DRAKY_PROJECT_ID: example-project
+    DRAKY_ENVIRONMENT: dev
+```
+
+Remember to change the `example-project` to the unique id.
+
 Always download the latest release. The packaged release is guaranteed to contain all dependencies.
 
 ### Web application
