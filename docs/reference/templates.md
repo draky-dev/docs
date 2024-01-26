@@ -49,8 +49,8 @@ Remember to change the `example-project` to the unique id.
 
 Always download the latest release. The packaged release is guaranteed to contain all dependencies.
 
-### Web application
+### PHP web application
 
-This is an example of configuration for web application, like Symfony or Drupal project.
+This is an example of configuration for a PHP web application, like Symfony or Drupal project.
 
-https://github.com/draky-dev/template-draky-webapp
+https://github.com/draky-dev/template-draky-php-webapp
