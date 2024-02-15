@@ -85,3 +85,8 @@ the custom entrypoint provided by the [draky-entrypoint](/docs/reference/addons/
 that the entrypoint is not included in the service's definition. It's being automatically configured and
 mounted in the container, provided that the addon files have been added to the directory tree, and the addon is
 enabled for the given service in the recipe.
+
+## .env
+
+All variables from draky's configuration files will be automatically gathered in the `.env` file that is accompanying the
+`docker-compose.yml` file.

@@ -13,7 +13,8 @@ They can have the following values:
 - `id` –> `str, optional`: Unique ID allowing identification of the configuration file. If not present, then the path
 to the file becomes its ID.
 - `variables` –> `dict<str,str>, optional`: A dictionary containing variables that are declared by this configuration
-  file.
+  file. Variables from all configuration files will be merged to produce the `.env` file. This file contains all
+  variables and is picked up by the docker-compose, making them available in the `docker-compose.yml` file.
   - These variables can be used in the `docker-compose.yml` file.
   - They are also available inside the commands. **Even the ones that are executed inside the containers**. Thanks to
     them, you can be very flexible with configuring your environment.
