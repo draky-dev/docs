@@ -34,6 +34,9 @@ with `.yml` appended to it.
 
 The following metadata values are supported:
 - `help` [string]: Information displayed in the terminal next to the command in the draky's `-h` output.
+- `user` [string/int]: This value is used only for the commands that run inside the containers. It allows 
+  to run the command as a given user inside the container. You can use user's numeric id, or name. In the case of
+  name, the user has to exist in the container's `/etc/passwd` file.
 
 ## stdin
 
