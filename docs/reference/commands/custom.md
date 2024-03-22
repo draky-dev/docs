@@ -29,7 +29,7 @@ programs inside the container.
 
 ## Metadata
 
-You can associate metadata with a custom command. For that, create a `yaml` file with the same name as a command, but
+You can associate metadata with a custom command. For that, create a `yaml` file with the same name as a command file, but
 with `.yml` appended to it.
 
 The following metadata values are supported:
