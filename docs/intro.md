@@ -14,6 +14,12 @@ sidebar_position: 1
 1. Download the latest release from [here](https://github.com/draky-dev/draky/releases).
 2. Put the `draky` script in your `/usr/local/bin` directory.
 
+## Updating
+
+1. Run `draky core destroy`.
+2. Replace your `/usr/local/bin/draky` script with a newer release.
+3. That's it!
+
 ## Usage
 
 ### Creating a new environment
