@@ -49,6 +49,7 @@ services:
       - "${DRAKY_NGINX_PORT}:80"
     volumes:
       - "${DRAKY_PROJECT_ROOT}:/var/www/html:cached,ro"
+      - "./resources:/draky-entrypoint.resources"
     addons:
       - draky-entrypoint
     depends_on:
@@ -57,8 +58,6 @@ services:
     extends:
       file:  ../../services/php/services.yml
       service: php
-    addons:
-      - draky-entrypoint
 ```
 
 **.draky/services/php/services.yml**:
@@ -80,7 +79,7 @@ services:
       - "${DRAKY_PROJECT_ROOT}:/var/www/html:cached,rw"
 ```
 
-In the above example the `DRAKY_OVERRIDE_*` variables and the `/draky-entrypoint.resources` volume are being used by
+In the above example the `DRAKY_OVERRIDE_*` variables and the `./resources:/draky-entrypoint.resources` volume are being used by
 the custom entrypoint provided by the [draky-entrypoint](/docs/reference/addons/draky-entrypoint-addon) addon. Note
 that the entrypoint is not included in the service's definition. It's being automatically configured and
 mounted in the container, provided that the addon files have been added to the directory tree, and the addon is

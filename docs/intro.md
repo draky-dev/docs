@@ -24,7 +24,30 @@ sidebar_position: 1
 
 ### Creating a new environment
 
-1. Learn about **[templates](/docs/reference/templates)**.
+1. Learn about **[templates](/docs/reference/templates)** (existing templates can be a great starting point for understanding draky's environments).
 2. Go to the root directory of your project, and run `draky env init`. If you installed any custom template, you will be able to select it.
 3. Modify the template's files and `docker-compose.yml` to fit your project (see: **[docker-compose.yml](/docs/reference/docker-compose)**, and **[configuration files](/docs/reference/configuration-files)**).
 4. Run `draky env up` to start your environment.
+
+## Platforms
+
+### Linux
+
+Works out of the box.
+
+### Windows
+
+Works in WSL. When using Docker Desktop, it has to be configured to expose the docker socket in WSL.
+
+### MacOS
+
+You may have a permission problem connecting to the docker socket. If that's the case, the current
+workaround is to add read/write permissions on the `/var/run/docker.sock` socker inside the `draky`
+container.
+
+```bash
+draky core create # Make sure that the draky container is up.
+docker exec draky chmod o+rw /var/run/docker.sock
+```
+
+This may need to be repeated after restarting Docker Desktop.
