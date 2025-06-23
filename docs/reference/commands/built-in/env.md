@@ -33,7 +33,7 @@ Available flags:
 
 - `-s`: substitute the variables with their values in the resulting `docker-compose.yml` file.
 
-## compose <...>
+## compose [...]
 Allows interacting with `docker compose` directly. You can pass any arguments.
 
 ## debug
