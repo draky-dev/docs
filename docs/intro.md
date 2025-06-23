@@ -51,3 +51,13 @@ docker exec draky chmod o+rw /var/run/docker.sock
 ```
 
 This may need to be repeated after restarting Docker Desktop.
+
+## Helpers
+
+### docker.sock path override
+
+If you want `draky` to connect with docker socket that exists under a non-standard path, you may
+provide the `DRAKY_DOCKER_SOCKET` environmental variable, which will override the default socket
+path.
+
+This might be useful if you use multiple docker virtualizations, exposed under multiple sockets.
