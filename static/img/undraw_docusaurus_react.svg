@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.5937756"
-     inkscape:cx="560.93217"
-     inkscape:cy="343.52389"
+     inkscape:zoom="0.7968878"
+     inkscape:cx="154.35046"
+     inkscape:cy="334.426"
      inkscape:window-width="2560"
      inkscape:window-height="1523"
      inkscape:window-x="0"
@@ -123,7 +123,8 @@
          id="Path_309"
          data-name="Path 309"
          d="M194.59,319.15h177.5V467.4l-177.5,4Z"
-         fill="#39374d" />
+         fill="#39374d"
+         style="fill:#d6d5e2;fill-opacity:1" />
       <path
          id="Path_310"
          data-name="Path 310"
@@ -276,15 +277,9 @@
     <circle
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.33695;stroke-dasharray:none;stroke-opacity:1"
        id="path11"
-       cx="713.2854"
-       cy="652.63525"
+       cx="715.06006"
+       cy="654.18811"
        r="15.833819" />
-    <circle
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:25.778;stroke-dasharray:none;stroke-opacity:1"
-       id="path13"
-       cx="721.54681"
-       cy="655.72406"
-       r="69.080872" />
     <g
        id="g2"
        transform="matrix(2.5265117,0,0,2.5265117,365.29279,580.7017)">
