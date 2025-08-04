@@ -63,6 +63,7 @@ const config = {
         logo: {
           alt: 'Draky Logo',
           src: 'img/logo.svg',
+            srcDark: 'img/logo-dark.svg',
         },
         items: [
           {

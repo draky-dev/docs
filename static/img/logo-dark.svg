@@ -9,7 +9,7 @@
    id="svg1"
    xml:space="preserve"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
-   sodipodi:docname="logo.svg"
+   sodipodi:docname="logo-dark.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,12 @@
        id="path11"
        cx="143.41104"
        cy="30.91188"
-       r="6.2670674" /><g
+       r="6.2670674" /><circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.31085;stroke-dasharray:none;stroke-opacity:1"
+       id="path13"
+       cx="146.43259"
+       cy="31.141056"
+       r="16.911995" /><g
        id="g2"
        transform="translate(5.4263092,1.4470158)"><g
          id="g15-9"
