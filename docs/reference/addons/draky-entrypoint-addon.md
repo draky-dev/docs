@@ -14,7 +14,7 @@ The following features will work as long as the addon is installed and enabled f
 Scripts inside the container's `/draky-entrypoint.init.d` directory will run each time the container
 is started.
 
-How to use it? Just add to your service, in this directory, a volume with your scripts.
+How to use it? Add a volume with your scripts to your service in this directory.
 
 Example volume:
 
@@ -25,7 +25,7 @@ Example volume:
 
 ## Override any files inside the container
 
-You can override many files inside the container in a bit cleaner way than adding many volumes.
+You can override many files inside the container in a cleaner way than adding many volumes.
 To achieve that, you need to mount a single volume `/draky-entrypoint.resources` inside the container.
 
 ```yaml
@@ -33,10 +33,10 @@ To achieve that, you need to mount a single volume `/draky-entrypoint.resources`
     - "./resources:/draky-entrypoint.resources:cached,ro"
 ```
 
-Now inside the `./resources` directory on the host, create the `override` directory, and the directory tree inside this
+Now, inside the `./resources` directory on the host, create the `override` directory. The directory tree inside this
 `override` directory will be merged into the container's directory tree each time the container starts!
 
-So if the content of this `./resources/override` directory will be:
+If the contents of this `./resources/override` directory are:
 
 ```
 ./resources/override/etc/php/php.ini
@@ -47,7 +47,7 @@ These files will be merged into the container's directory tree each time the con
 
 That way you can customize your containers per-project without having to produce new images.
 
-### Variables in the overriding files.
+### Variables in the overriding files
 
 The entrypoint provides a way for substituting variables inside the files in the `override` directory.
 
@@ -73,13 +73,13 @@ Note that the variables available in the overriding files are **only** variables
 string.
 
 Note also that because you can use variables from your [configuration files](/docs/reference/configuration-files) in the service definitions,
-you can pass them into the container and use in your files in the `override` directory. That way you to some degree
-you can configure files inside your container with your configuration files on the host.
+you can pass them into the container and use them in your files in the `override` directory. That way, to some degree,
+you can configure files inside your container with configuration files on the host.
 
-## Environmental variables
+## Environment variables
 
-You can pass some optional environmental variables to the container that is using `draky-entrypoint`, to alter its behavior.
+You can pass some optional environment variables to the container that is using `draky-entrypoint` to alter its behavior.
 
 `DRAKY_ENTRYPOINT_DO_CREATE_HOST_USER` - if this variable has a value, the `draky-entrypoint` will create a user with the name `host`,
-with the same id as value of this variable. Why would you want to use it? For example: if you want to run something inside the
-container as a host. That way you will have access to the files created by this process. A common use case would be `php-fpm`.
+with the same ID as the value of this variable. Why would you want to use it? For example, if you want to run something inside the
+container as the host user. That way you will have access to the files created by this process. A common use case would be `php-fpm`.

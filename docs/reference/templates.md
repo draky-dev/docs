@@ -6,8 +6,8 @@ sidebar_position: 4
 
 ## Introduction
 
-Template is basically a `docker-compose.yml` file with its configuration, and anything that can be
-consumed by the services, that can be used to set up a project.
+A template is basically a `docker-compose.yml` file with its configuration and anything that can be
+consumed by the services, which can be used to set up a project.
 
 The default empty template is always available, but you can also prepare custom templates. Custom
 templates are pulled from the `~/.draky/templates/` directory.

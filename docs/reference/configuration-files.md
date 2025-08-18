@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Specification
 
-Any file that ends with the `dk.yml` is considered a **configuration file**. Configuration files can be placed anywhere
+Any file that ends with `dk.yml` is considered a **configuration file**. Configuration files can be placed anywhere
 inside the project's `.draky` directory.
 
 They can have the following values:
@@ -32,9 +32,9 @@ to the file becomes its ID.
   variable will be available, then you can reference this configuration file here by its `id`.
 - `version` –> `str, optional`: Configuration files can also have a versioning information.
 
-[Addon](/docs/reference/addons/about) is a special type of configuration file.
+An [addon](/docs/reference/addons/about) is a special type of configuration file.
 
-It does everything that normal configuration files do, but additionally it indicates the addon
+It does everything that normal configuration files do, but additionally it indicates the addon's
 location.
 
 ## Example

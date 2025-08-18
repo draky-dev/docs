@@ -5,31 +5,31 @@ sidebar_position: 1
 # docker-compose.yml
 
 ## Introduction
-`docker-compose.yml` is a final definition of your environment. draky allows you to use your own
-`docker-compose.yml` file, but it also allows for generating one based on the recipe. The
-difference between the directly providing the `docker-compose.yml` file, and generating one is
-that in the case of the recipe [addons](/docs/reference/addons/about) can hook into the generation process and automatically
+`docker-compose.yml` is the final definition of your environment. draky allows you to use your own
+`docker-compose.yml` file, but it also allows generating one based on a recipe. The
+difference between directly providing the `docker-compose.yml` file and generating one is that, when using a recipe,
+[addons](/docs/reference/addons/about) can hook into the generation process and automatically
 tweak the resulting `docker-compose.yml` file.
 
-draky is looking for the docker-compose file in the following location: `.draky/env/dev/docker-compose.yml`.
+draky looks for the docker-compose file in the following location: `.draky/env/dev/docker-compose.yml`.
 
 ## Recipe
 
-The set of instructions telling draky how to build a `docker-compose.yml` file is called *recipe*.
+The set of instructions telling draky how to build a `docker-compose.yml` file is called a *recipe*.
 
-draky is looking for the *recipe* file in the following location: `.draky/env/dev/docker-compose.recipe.yml`.
+draky looks for the *recipe* file in the following location: `.draky/env/dev/docker-compose.recipe.yml`.
 
 ### Recipe specification
-Recipe file has a single key `services` where services' configurations are located. Its spec is almost
+The recipe file has a single key, `services`, where service configurations are located. Its spec is almost
 the same as the `docker-compose.yml` file, with the only difference being that every service can
 have an optional `draky` property.
 
-`draky` property stores a dictionary with the following values:
+The `draky` property stores a dictionary with the following values:
 
 `addons` (optional): The list of [addons](/docs/reference/addons/about) enabled for the specific service. Addons
 can alter the service they are enabled on.
 
-For each service you can add `addons` section to specify the list of addons enabled for this service. These addons need
+For each service, you can add an `addons` section to specify the list of addons enabled for this service. These addons need
 to be [properly installed first](/docs/reference/addons/about#installation).
 
 ### Recipe example
@@ -79,10 +79,10 @@ services:
       - "${DRAKY_PROJECT_ROOT}:/var/www/html:cached,rw"
 ```
 
-In the above example the `DRAKY_OVERRIDE_*` variables and the `./resources:/draky-entrypoint.resources` volume are being used by
+In the above example, the `DRAKY_OVERRIDE_*` variables and the `./resources:/draky-entrypoint.resources` volume are used by
 the custom entrypoint provided by the [draky-entrypoint](/docs/reference/addons/draky-entrypoint-addon) addon. Note
-that the entrypoint is not included in the service's definition. It's being automatically configured and
-mounted in the container, provided that the addon files have been added to the directory tree, and the addon is
+that the entrypoint is not included in the service's definition. It is automatically configured and
+mounted in the container, provided that the addon files have been added to the directory tree and the addon is
 enabled for the given service in the recipe.
 
 ## .env
