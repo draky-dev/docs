@@ -49,7 +49,7 @@ as a command executed inside your `database` container like so:
 mysql -uroot "$@" < /dev/stdin
 ```
 
-And that command could be invoked in a following way:
+And that command could be invoked in the following way:
 
 ```bash
 $ draky mysql mydatabase < ./dbdump.sql
