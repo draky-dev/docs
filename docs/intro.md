@@ -4,6 +4,11 @@ sidebar_position: 1
 
 # Quick start
 
+## Why draky?
+
+If you are not sold on `draky` yet, see the [basic tutorial](/docs/tutorials/basics), to see, what
+it's capable of.
+
 ## Requirements
 
 - bash
