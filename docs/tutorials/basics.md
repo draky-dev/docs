@@ -4,18 +4,18 @@ sidebar_position: 1
 
 # Basics
 
-## 0. Introduction
+## Introduction
 
 draky is a Docker-based environment manager made to help you manage your Docker
 environments whenever you need them. Unlike other tools like Lando, Docksal, or DDEV,
 this tool was designed to be unopinionated and keep you as close to your docker-compose.yml as
 possible. This tutorial will show you how to work with it.
 
-## 1. Installation
+## Installation
 
 First, [install](/docs/intro#installation) draky.
 
-## 2. Initializing a new project
+## Initializing a new project
 
 To initialize a new project, run `draky env init` in the new project's root directory, and choose
 the default template.
@@ -53,7 +53,7 @@ This is the directory structure that has been created:
   template.dk.yml
 ```
 
-## 3. Recipe, docker-compose.yml, and services
+## Recipe, docker-compose.yml, and services
 
 The default template comes with an example `docker-compose.recipe.yml` file for the default `dev`
 environment. It looks just like a regular `docker-compose.yml` file, but it's not. draky processes
@@ -137,7 +137,7 @@ This is the heart of your environment. That's what will be used, when you run `d
 You don't need to run `draky env build` each time you change your recipe, though. The `docker-compose.yml` file
 is automatically regenerated each time you start environment.
 
-## 4. Variables
+## Variables
 
 draky allows us to define variables that will be available in the `docker-compose.yml` file.
 They can be stored in configuration files with the `dk.yml` extension, allowing us to better organize
@@ -227,7 +227,7 @@ Run `draky env build -s` to build the `docker-compose.yml` file with variable su
 
 That way you don't need to look at the `.env` file to see, what values are actually used.
 
-## 5. Commands
+## Commands
 
 ### Host commands
 
@@ -266,6 +266,8 @@ Let's create a command that will pass arguments to the `mariadb` client inside t
 #!/usr/bin/env sh
 mariadb -u root "$@"
 ```
+
+But for this to work, we need to start our environment, so let's run `draky env up` first.
 
 Now when we run `draky mariadb --version` we will see something like:
 
@@ -332,7 +334,7 @@ MARIADB_IMAGE: mariadb:12
 
 More about custom commands can be found in the [documentation](/docs/reference/commands/custom).
 
-## 6. Multiple environments
+## Multiple environments
 
 draky also allows you to create multiple environments, each with its own `docker-compose.recipe.yml`
 file, its own variables, and commands. All configuration files and commands can be scoped to
@@ -340,7 +342,7 @@ specified environments.
 
 You can learn more about this feature in the [documentation](/docs/reference/environments).
 
-## 7. Addons
+## Addons
 
 Another concept worth briefly mentioning is addons. Addons let you process a recipe before it’s
 converted into a `docker-compose.yml` file. For example, they can automatically attach a custom
@@ -348,4 +350,9 @@ entrypoint to any service to provide additional functionality.
 
 We provide the addon, which does exactly that: `draky-entrypoint`.
 
-Its powerful features deserve a dedicated tutorial.
+Among others, it provides generic ways for:
+- Running initialization scripts in containers.
+- Overriding files inside the containers.
+- Creating the host user inside containers.
+
+Its powerful features deserve a dedicated tutorial, that can be found [here](/docs/tutorials/draky-entrypoint).
