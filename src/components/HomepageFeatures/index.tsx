@@ -10,23 +10,25 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Not opinionated",
+    title: "What is draky?",
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        <strong>draky</strong> doesn't ship with any images that you would need to figure out how to configure or
-        replace. It is designed to easily utilize and enhance any existing image, so you can design your environment
-        as you wish.
+        <strong>draky</strong> is  basically a wrapper around <code>docker compose</code> that makes managing your
+        services and commands much easier.
+        It doesn't hide your environment's configuration behind the layers of abstraction. You
+        can directly see, and modify your <code>docker-compose.yml</code> file.
       </>
     ),
   },
   {
-    title: 'Allows you to work directly with docker',
+    title: 'Not opinionated',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        <strong>draky</strong> doesn't hide your environment's configuration behind the layers of abstraction. You
-        can directly see, and modify your <code>docker-compose.yml</code> file.
+        <strong>draky</strong> doesn't ship with its own images that you would need to figure out how to customize.
+        It is designed to make it possible (through the <code>draky-entrypoint</code>) to easily modify existing images on runtime, which
+        makes development and prototyping faster.
       </>
     ),
   },
