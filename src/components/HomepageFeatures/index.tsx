@@ -35,9 +35,11 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        <strong>draky</strong> helps you with:
+        With <strong>draky</strong> you can:
         <ul>
-          <li>Running custom scripts inside the containers.</li>
+          <li>Create custom commands passing arguments and running code inside the containers.</li>
+          <li>Make your environments configurable with easy to organize variables.</li>
+          <li>Augment existing images with new functionality without a need of building and hosting custom ones.</li>
           <li>Creating templates for your environments.</li>
           <li><code>draky-entrypoint</code> provides you with some helpers, like a generic mechanism that allows you
           to override any files in any image on the container's startup without the need of adding volumes.</li>
