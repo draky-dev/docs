@@ -4,8 +4,8 @@ sidebar_position: 1
 
 # What does draky solve?
 
-draky is a kind of wrapper helping interact with docker-compose. It dynamically creates a `docker-compose.yml`
-and `.env` file based on provided configurations, that are made to be easier to manage and reuse than what
+draky is a wrapper helping interact with docker-compose. It dynamically creates a `docker-compose.yml`
+and `.env` files based on provided configurations that are made to be easier to manage and reuse than what
 docker compose offers out of the box.
 
 It addresses several common annoyances of Docker Compose.
