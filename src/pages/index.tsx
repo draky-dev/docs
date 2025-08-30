@@ -17,13 +17,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Quick start - 5 min ⏱️
+            to="/docs/other/what-draky-solves">
+            What problems draky solves?
           </Link>&nbsp;&nbsp;&nbsp;
           <Link
             className="button button--secondary button--lg"
-            to="/docs/tutorials/basics">
-            Basic tutorial
+            to="/docs/intro">
+            Quick start - 5 min ⏱️
           </Link>
         </div>
       </div>

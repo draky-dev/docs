@@ -26,9 +26,12 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        <strong>draky</strong> doesn't ship with its own images that you would need to figure out how to customize.
+        <p><strong>draky</strong> doesn't ship with its own images that you would need to figure out how to customize.
         It is designed to make it possible (through the <code>draky-entrypoint</code>) to easily modify existing images on runtime, which
-        makes development and prototyping faster.
+        makes development and prototyping faster.</p>
+
+        <p>In fact it's so not opinionated that the <code>docker-compose.yml</code> file produced by draky, doesn't
+        depend on it – it can be run with a vanilla <code>docker-compose</code>. <strong>draky</strong> doesn't force anything on you, including itself.</p>
       </>
     ),
   },
