@@ -56,6 +56,37 @@ draky compiles an `.env` file from multiple `*.dk.yml` files that you can place 
 `.draky` directory. This enables a cleaner organization of variables — you can keep service‑specific
 variables alongside the service definition, further improving encapsulation.
 
+This is the configuration structure you could have:
+```text
+.draky/
+  env/
+    dev/
+      .env <-- This is automatically created including all variables from all *.dk.yml files.
+      docker-compose.recipe.yml <-- the recipe is almost the same in spec as `docker-compose.yml`, but because of this indirection, we can fix some annoyances of `docker-compose.yml` .
+      docker-compose.yml <-- This is automatically created from the above recipe. The created `docker-compose.yml` doesn't need `draky` to run.
+  services/
+    mariadb/ <-- This directory encapsulates all `mariadb` configuration.
+      commands/ <-- This directory contains all commands specific to the `mariadb` definition.
+        mariadb.database.dk.sh <-- This is a command-script that will run inside the `database` service. Can be invoked as `draky mariadb` anywhere in the project. This command assumes that the `mariadb` definition will be imported to the docker-compose.recipe.yml as a `database` service.
+      resources/ <-- This directory is the only volume used by the `mariadb`.
+        init.d/ <--  This directory contains initialization scripts that will be executed inside the container on startup.
+          0-setup.sh
+        override/
+          etc/
+            mysql/
+              my.cnf <-- This file is copied into the container's filesystem and overrides the default `my.cnf` file.
+      variables.dk.yml <-- This contains variables specific to the mariadb service.
+      services.yml <-- This contains definition of the mariadb service.
+  .gitignore <-- Excludes `local.dk.yml` file from being committed to the repository.
+  core.dk.yml <-- Includes project id.
+  local.dk.yml <-- This file contains variables that are not supposed to be committed to the repository.
+  template.dk.yml <-- Metadata information about this configuration structure.
+```
+
+As you can see, `mariadb` definition is completely encapsulated with its all dependencies in a single directory.
+
+It can be easily copy-pasted to a different project.
+
 ## Commands
 
 ### Problem
