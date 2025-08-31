@@ -6,8 +6,8 @@ sidebar_position: 1
 
 ## Why draky?
 
-If you are not sold on `draky` yet, see the [basic tutorial](/docs/tutorials/basics), to see, what
-it's capable of.
+If you are not sold on `draky` yet, see the [What does draky solve?](/docs/other/what-draky-solves)
+page to see how it can help you.
 
 ## Requirements
 
