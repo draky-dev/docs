@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        <strong>draky</strong> is  basically a wrapper around <code>docker compose</code> that makes managing your
+        <strong>draky</strong> is a wrapper around <code>docker compose</code> that makes managing your
         services and commands much easier.
         It doesn't hide your environment's configuration behind the layers of abstraction. You
         can directly see, and modify your <code>docker-compose.yml</code> file.
