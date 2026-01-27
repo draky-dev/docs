@@ -30,11 +30,13 @@ to the file becomes its ID.
 - `dependencies` –> `list<str>, optional`: It allows you to define the relationships between configuration files. If
   you reference a variable from a different file, and need to ensure that this file will be loaded before yours, so the
   variable will be available, then you can reference this configuration file here by its `id`.
-- `version` –> `str, optional`: Configuration files can also have a versioning information.
+- `version` –> `str, optional`: Configuration files can also have versioning information.
+- `environments` –> `list<str>, optional`: It allows you to define the environments in which this configuration
+  file should be applied. If not specified, the configuration file will be applied to all environments.
 
 An [addon](/docs/reference/addons/about) is a special type of configuration file.
 
-It does everything that normal configuration files do, but additionally it indicates the addon's
+It does everything that normal configuration files do, but additionally, it indicates the addon's
 location.
 
 ## Example
