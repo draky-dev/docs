@@ -38,9 +38,17 @@ export default function Home(): JSX.Element {
       title={`${siteConfig.title}`}
       description="draky – a development environment that keeps you in full control.">
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+        <main>
+            <div className={styles.videoContainer}>
+                <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/F17aWTteuIY?si=GlRJRmIQX6iA4-mD"
+                        title="YouTube video player" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen></iframe>
+            </div>
+            <HomepageFeatures/>
+        </main>
     </Layout>
   );
 }
