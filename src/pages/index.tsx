@@ -19,11 +19,6 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/other/what-draky-solves">
             What problems draky solves?
-          </Link>&nbsp;&nbsp;&nbsp;
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Quick start - 5 min ⏱️
           </Link>
         </div>
       </div>
@@ -40,6 +35,7 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
         <main>
             <div className={styles.videoContainer}>
+                <h2>Tutorial</h2>
                 <iframe width="560" height="315"
                         src="https://www.youtube.com/embed/F17aWTteuIY?si=GlRJRmIQX6iA4-mD"
                         title="YouTube video player" frameBorder="0"
